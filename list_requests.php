@@ -5,11 +5,11 @@ require "db.php";
 
 $lecturer = $_SESSION["user_id"];
 
-$sql = "SELECT cr.id AS request_id, u.first_name, u.last_name, c.course_name
-        FROM course_requests cr
-        JOIN users u ON cr.student_id = u.id
-        JOIN courses c ON cr.course_id = c.id
-        WHERE c.lecturer_id = ? AND cr.status = 'pending'";
+$sql = "SELECT cr.`id` AS request_id, u.`first_name`, u.`last_name`, c.`course_name`
+        FROM `course_requests` cr
+        JOIN `users` u ON cr.`student_id` = u.`id`
+        JOIN `courses` c ON cr.`course_id` = c.`id`
+        WHERE c.`lecturer_id` = ? AND cr.`status` = 'pending'";
 
 $stmt = $con->prepare($sql);
 $stmt->bind_param("i", $lecturer);

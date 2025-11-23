@@ -1,0 +1,108 @@
+===========================================
+FILEZILLA UPLOAD GUIDE
+===========================================
+
+FILES TO UPLOAD TO SERVER:
+---------------------------
+Upload ONLY these files to /public_html/ on your server:
+
+PHP FILES:
+- auth_check.php
+- courses.php
+- create_course_api.php
+- create_course.php
+- dashboard.php
+- db.php
+- handle_request.php
+- index.php
+- join_course.php
+- list_courses.php
+- list_requests.php
+- login_api.php
+- login.php
+- logout.php
+- my_courses.php
+- requests.php
+- signup_api.php
+- signup.php
+
+JAVASCRIPT FILES:
+- create_course.js
+- list_courses.js
+- login.js
+- logout.js
+- requests.js
+- signup.js
+
+CSS FILES:
+- styles.css
+
+SQL FILES (for reference, not needed for website):
+- database_setup.sql
+
+===========================================
+FILES TO EXCLUDE (DO NOT UPLOAD):
+===========================================
+- .git/ folder (entire folder)
+- .env file (if exists - create on server instead)
+- Any .DS_Store files (Mac system files)
+- Any .log files
+- node_modules/ (if exists)
+
+===========================================
+FILEZILLA SETTINGS:
+===========================================
+
+1. TRANSFER SETTINGS:
+   - File Type: Binary (for images, if any)
+   - For PHP/JS/CSS: Auto or ASCII
+
+2. FILE PERMISSIONS (after upload):
+   - PHP files: 644
+   - Directories: 755
+   - db.php: 600 (more secure, but 644 works too)
+
+3. UPLOAD PATH:
+   - Remote directory: /public_html/
+   - Upload all files directly to public_html (not in subfolders)
+
+===========================================
+STEP-BY-STEP UPLOAD:
+===========================================
+
+1. Connect to FTP server:
+   - Host: 169.239.251.102
+   - Port: 321
+   - Username: peter.mayen
+   - Password: [Your system password]
+   - Protocol: FTP
+
+2. Navigate to /public_html/ on server
+
+3. Select all files EXCEPT .git folder
+
+4. Drag and drop to /public_html/
+
+5. If upload fails for specific files:
+   - Check file name (no special characters)
+   - Try uploading one at a time
+   - Check file permissions
+
+===========================================
+AFTER UPLOAD:
+===========================================
+
+1. Create .env file on server (if using):
+   - Create in /public_html/
+   - Add your database credentials
+   - Set permissions to 600
+
+2. Test your website:
+   - http://169.239.251.102:341/~peter.mayen
+
+3. Check database connection
+   - Ensure database exists
+   - Run database_setup.sql if needed
+
+===========================================
+

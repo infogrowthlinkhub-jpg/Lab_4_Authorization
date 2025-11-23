@@ -8,7 +8,7 @@ $input = json_decode(file_get_contents("php://input"), true);
 $course_id = $input["course_id"];
 $student_id = $_SESSION["user_id"];
 
-$sql = "INSERT INTO course_requests (course_id, student_id) VALUES (?, ?)";
+$sql = "INSERT INTO `course_requests` (`course_id`, `student_id`) VALUES (?, ?)";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("ii", $course_id, $student_id);
 

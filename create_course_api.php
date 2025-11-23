@@ -14,7 +14,7 @@ $name = $input["course_name"];
 $code = $input["course_code"];
 $lecturer = $_SESSION["user_id"];
 
-$sql = "INSERT INTO courses (course_name, course_code, lecturer_id) VALUES (?, ?, ?)";
+$sql = "INSERT INTO `courses` (`course_name`, `course_code`, `lecturer_id`) VALUES (?, ?, ?)";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("ssi", $name, $code, $lecturer);
 

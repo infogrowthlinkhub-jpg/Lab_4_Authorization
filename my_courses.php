@@ -11,10 +11,10 @@ require "db.php";
 
 // Get enrolled courses for the student
 $student_id = $_SESSION["user_id"];
-$sql = "SELECT c.id, c.course_name, c.course_code, c.created_at 
-        FROM courses c
-        INNER JOIN course_requests cr ON c.id = cr.course_id
-        WHERE cr.student_id = ? AND cr.status = 'approved'";
+$sql = "SELECT c.`id`, c.`course_name`, c.`course_code`, c.`created_at` 
+        FROM `courses` c
+        INNER JOIN `course_requests` cr ON c.`id` = cr.`course_id`
+        WHERE cr.`student_id` = ? AND cr.`status` = 'approved'";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("i", $student_id);
 $stmt->execute();

@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         Swal.fire({
             icon: 'error',
             title: 'Login Failed',
-            text: 'Invalid email or password. Please try again.'
+            text: result.error || 'Invalid email or password. Please try again.'
         });
     }
 });

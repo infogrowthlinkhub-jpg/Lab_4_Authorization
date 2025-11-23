@@ -1,0 +1,69 @@
+===========================================
+QUICK UPLOAD CHECKLIST FOR FILEZILLA
+===========================================
+
+UPLOAD THESE 25 FILES TO /public_html/:
+===========================================
+
+PHP FILES (18 files):
+✓ auth_check.php
+✓ courses.php
+✓ create_course_api.php
+✓ create_course.php
+✓ dashboard.php
+✓ db.php
+✓ handle_request.php
+✓ index.php
+✓ join_course.php
+✓ list_courses.php
+✓ list_requests.php
+✓ login_api.php
+✓ login.php
+✓ logout.php
+✓ my_courses.php
+✓ requests.php
+✓ signup_api.php
+✓ signup.php
+
+JAVASCRIPT FILES (6 files):
+✓ create_course.js
+✓ list_courses.js
+✓ login.js
+✓ logout.js
+✓ requests.js
+✓ signup.js
+
+CSS FILES (1 file):
+✓ styles.css
+
+OPTIONAL FILES:
+✓ .htaccess (for security)
+✓ database_setup.sql (for reference)
+
+===========================================
+DO NOT UPLOAD:
+===========================================
+✗ .git/ folder
+✗ .env file (create on server)
+✗ FILEZILLA_UPLOAD_GUIDE.txt
+✗ UPLOAD_CHECKLIST.txt
+✗ Any hidden files starting with .
+
+===========================================
+FILEZILLA TIPS:
+===========================================
+
+1. Select files in FileZilla (not folders)
+2. Right-click → Upload
+3. If file fails:
+   - Check if file is open in another program
+   - Try renaming file (remove special chars)
+   - Upload one at a time
+
+4. After upload, set permissions:
+   - Right-click file → File permissions
+   - PHP files: 644
+   - Folders: 755
+
+===========================================
+

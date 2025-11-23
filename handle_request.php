@@ -13,7 +13,7 @@ $input = json_decode(file_get_contents("php://input"), true);
 $request_id = $input["request_id"];
 $action = $input["action"]; // "approved" or "rejected"
 
-$sql = "UPDATE course_requests SET status = ? WHERE id = ?";
+$sql = "UPDATE `course_requests` SET `status` = ? WHERE `id` = ?";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("si", $action, $request_id);
 
